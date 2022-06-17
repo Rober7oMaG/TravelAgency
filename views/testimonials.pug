@@ -1,0 +1,30 @@
+extends ./layouts/index
+
+block content
+    main.container.mt-5 
+        h1.text-center #{page}
+
+        blockquote.text-center Read about our clients experiences
+        include ./layouts/testimonials-block
+
+        .row
+            .col-md-12
+                h2.d-block.w-100.text-center Add a Testimonial
+                if (errors)
+                    each error in errors 
+                        .alert.col.alert-danger.text-center #{error.message}
+
+            .row.justify-content-center.col
+                .col-md-8 
+                    form(action="/testimonials" method="POST") 
+                        .form-group 
+                            label(for="name") Name
+                            input#name.form-control(type="text" placeholder="Your Name" name="name" value= name)
+                        .form-group 
+                            label(for="email") Email
+                            input#email.form-control(type="email" placeholder="Your Email" name="email" value= email)
+                        .form-group 
+                            label(for="message") Message
+                            textarea#name.form-control(placeholder="Your Message" name="message" rows=3 value) #{message}
+                        input.btn.btn-success.btn-block(type="submit" value="Submit")
+            

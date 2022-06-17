@@ -1,0 +1,33 @@
+extends ./layouts/index
+
+block slider 
+    .slider 
+        h1 Rio de Janeiro
+        em adventure
+
+block content
+    main.container.mt-5 
+        h2.text-center.mb-5 
+        .row.mb-5 
+            .col-md-6 
+                p Ex aliquip incididunt consectetur sint velit. Amet aute commodo est sunt. Deserunt nostrud deserunt esse sint fugiat reprehenderit ex irure. Sit dolor aliquip in reprehenderit commodo adipisicing irure. Fugiat ex anim veniam pariatur laborum non sunt eiusmod. Eiusmod in duis reprehenderit eu enim cillum proident do et.
+                p Consectetur velit consectetur esse fugiat deserunt amet consequat veniam minim fugiat voluptate ipsum tempor. Pariatur et veniam non fugiat do labore incididunt laboris elit id qui deserunt. Culpa sint veniam et incididunt. Dolore velit duis Lorem ut ut dolor.
+            
+            .col-md-6
+                img.img-fluid(src="/img/home_us.jpg", alt="About us image")
+                
+            include ./layouts/trips-block
+    
+    .discount
+        .container
+            .row
+                .col-md-6
+                    .content
+                        h3 5% Off 
+                        p.title Trip to Canada 
+                        p.date June 19th, 2023 - August 2nd, 2023
+                        p.price $2,500 USD
+
+    .container 
+        h2.mt-5.text-center Testimonials
+        include ./layouts/testimonials-block
