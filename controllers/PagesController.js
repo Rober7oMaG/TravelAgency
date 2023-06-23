@@ -1,5 +1,5 @@
-import {Trip} from "../models/Trip.js";
-import {Testimonial} from '../models/Testimonial.js'
+import { Trip } from "../models/Trip.js";
+import { Testimonial } from '../models/Testimonial.js'
 
 const homePage = async (req, res) => {
     // Get three trips and three testimonials from database

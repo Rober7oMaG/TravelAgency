@@ -12,10 +12,10 @@ db.authenticate()
 // Set port
 const port = process.env.PORT || 4000;
 
-//Enable Pug
+// Enable Pug
 app.set('view engine', 'pug');
 
-// Get currente year
+// Get current year
 app.use((req, res, next) => {
     const year = new Date();
     res.locals.currentYear = year.getFullYear();
